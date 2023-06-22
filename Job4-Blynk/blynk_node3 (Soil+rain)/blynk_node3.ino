@@ -112,8 +112,8 @@ void sendMessage()
 
   isRaining = !digitalRead(RainSensorPin);  // Invert the value since the sensor is pulled up
   
-  Blynk.virtualWrite(A4, soilMoisturePercent);  // Mengirim nilai kelembaban tanah ke pin virtual V1 di Blynk
-  Blynk.virtualWrite(1, isRaining);            // Mengirim status hujan ke pin virtual V2 di Blynk
+  Blynk.virtualWrite(V5, soilMoisturePercent);  // Mengirim nilai kelembaban tanah ke pin virtual V1 di Blynk
+
   
   String msg = "NODE 3 ";
   msg += mesh.getNodeId();

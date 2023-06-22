@@ -110,8 +110,8 @@ void sendMessage()
   float temperature = dht.readTemperature();
   float humidity = dht.readHumidity();
   
-  Blynk.virtualWrite(A0, temperature);  // Mengirim nilai suhu ke pin virtual V1 di Blynk
-  Blynk.virtualWrite(A1, humidity);     // Mengirim nilai kelembaban ke pin virtual V2 di Blynk
+  Blynk.virtualWrite(V3, temperature);  // Mengirim nilai suhu ke pin virtual V1 di Blynk
+  Blynk.virtualWrite(V4, humidity);     // Mengirim nilai kelembaban ke pin virtual V2 di Blynk
   
   String msg = "NODE 2 ";
   msg += mesh.getNodeId();

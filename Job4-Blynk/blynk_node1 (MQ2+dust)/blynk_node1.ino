@@ -121,8 +121,8 @@ void sendMessage()
   delayMicroseconds(DUST_TSLEEP);
   float sigVolt = outVo * (3.3 / 1024);
   float dustLevel = 1.7 * sigVolt - 0.1;
-  Blynk.virtualWrite(V1, sigVolt);
-  Blynk.virtualWrite(V2, dustLevel);
+  Blynk.virtualWrite(V0, sigVolt);
+  Blynk.virtualWrite(V1, dustLevel);
 
   String msg = "NODE 1 ";
   msg += mesh.getNodeId();
